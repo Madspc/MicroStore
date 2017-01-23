@@ -1,0 +1,65 @@
+﻿/*Hola de estilo principal de la aplicacion,adapto con el framewrok de bootstrap*/
+body {
+       padding-top: 50px;
+    padding-bottom: 20px;
+    text-align:center;
+    background: #ffffff; /* fallback for old browsers */
+   /* background: -webkit-linear-gradient(to left, #41295a, #2F0743); /* Chrome 10-25, Safari 5.1-6 */
+   /* background: linear-gradient(to left, #41295a, #2F0743); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+    font-family: Montserrat;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #6EB1E1;
+}
+/*Es utilizado para mandar a llamar el tipo de letra especifico y no es necesario descargarla en nuestro equipo*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYFQlYEbsez9cZjKsNMjLOwM.eot);
+  src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYFQlYEbsez9cZjKsNMjLOwM.eot) format('embedded-opentype'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+.txt1{
+    visibility: visible;
+    display:inline;
+}
+.txt2{
+    visibility:hidden;
+     display:inline;
+}
+.txt3{
+    visibility:hidden;
+     display:inline;
+}
+.txt4{
+    visibility:hidden;
+     display:inline;
+}
+.txt5{
+    visibility:hidden;
+     display:inline;
+}
+.txt6{
+    visibility:hidden;
+     display:inline;
+}
+#ProductoImg{
+    width: 150px;
+    height: 50px;
+}
+/* Es el espacio entre los elementos */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Establecer ancho en los elementos de entrada de formulario ya que son 100% de ancho por defecto */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.textocentrado{
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MicroSotre</title>
+    <link href="~/Content/MicroStoreCSS.css" rel="stylesheet" />
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="~/ms-icon-70x70.png" />
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="color: #6EB1E1;font-size: x-large;">@Html.ActionLink("MicroStore", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</ul>
+                <ul class="nav navbar-nav" style="color: #6EB1E1;font-size: x-large;">@Html.ActionLink("Nosotros", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</ul>
+                <ul class="nav navbar-nav" style="color: #6EB1E1;font-size: x-large;">@Html.ActionLink("Galería", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</ul>
+                <ul class="nav navbar-nav" style="color: #6EB1E1;font-size: x-large;">@Html.ActionLink("Sucursales", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</ul>
+                <ul class="nav navbar-nav" style="color: #6EB1E1;font-size: x-large;">@Html.ActionLink("Contacto", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</ul>
+</div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <!--Contenedor de pie de página--->
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">Aceptamos las siguientes formas de pago</div>
+                </div><br />
+                <div class="row">
+                    <ul>
+                        <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" style="list-style:none;color: #6EB1E1;">Pago contra entrega</li>
+                        <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" style="list-style:none;color: #6EB1E1;">Tarjetas Visa</li>
+                        <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" style="list-style:none;color: #6EB1E1;">Tarjetas MasterCard</li>
+                        <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" style="list-style:none;color: #6EB1E1;">American Express</li>
+                        <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" style="list-style:none;color: #6EB1E1;">Pago en OXXO</li>
+                        <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" style="list-style:none;color: #6EB1E1;">PayPal</li>
+                    </ul>
+                </div><br />
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">&copy; @DateTime.Now.Year - MicroStore | Todos los derechos reservados. | Precios son expresados en moneda nacional (MXN)</div>
+                </div><br />
+            </div>
+        </footer>
+    </div>
+
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+</body>
+</html>

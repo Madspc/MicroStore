@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MicroStore.Models.UsuarioCompra>
+<link href="~/Content/MicroStoreCSS.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "LoggedIn";
+}
+<!--Imprimos el nombre del usuario de la sesión activa.-->
+<h2>Bienvenido @Session["Usuario"].ToString()</h2>
+<hr />
+<!--Creamos una tabla donde se guardaran los valores de obtenidos de la tabla de la base de datos-->
+<!--Unicamos creamos los campos visuales donde se vera el contenido de la tabla,es una tabla visualemente-->
+<div class="container">
+    <div class="row">
+        <table class="table-responsive col-lg-12">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreProducto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Precio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Imagen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Solicitado)
+                </th>
+            </tr>
+
+            <!--Este foreach recorre la tabla de la base datos, obteniendo cada fila de la tabla-->
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreProducto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Precio)
+                    </td>
+                    <td>
+                        @{
+                            var base64 = Convert.ToBase64String(item.Imagen);
+                            var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                        }
+                        <!--<img src='@imgsrc' id="ProductoImg" alt="Imagen del producto" />-->
+                        <img class="img-responsive" src="data:image;base64,@System.Convert.ToBase64String(item.Imagen)" id="" />
+                    </td>
+                    <td>
+                        @Html.CheckBoxFor(modelItem => item.Solicitado)
+                    </td>
+                </tr>
+                            }
+        </table>
+        <input type="submit" value="Proceder Compra" class="btn btn-primary" />
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/MiJQuery.js"></script>
