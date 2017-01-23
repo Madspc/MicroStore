@@ -10,3 +10,8 @@ Base de datos: SQL Server 2014 express
 IDE: Visual Studio 2015 Community
 Lenguaje: C#
 Librerias: Javascript y JQuery
+
+Credenciales de prueba
+============================
+Uusario:Martin
+Pass:Dolar
