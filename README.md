@@ -15,3 +15,15 @@ Credenciales de prueba
 ============================
 Uusario:Martin
 Pass:Dolar
+
+============================
+Manual
+============================
+*La aplicación iniciara en la pantalla de "Login"
+*Introducir las credenciales aportadas en este mismo documento
+*Al ingresar se podra ver un catalogo de 6 productos a elegir 
+*Elegeir productos deseado y proceder a pagar
+
+REQUERIMIENTO
+============================
+Utilizar el script proporcionado en el repositorio con la intencion de generar la base de datos necesaria.
